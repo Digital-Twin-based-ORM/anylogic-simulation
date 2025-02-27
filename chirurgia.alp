@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.2.202410172112" AlpVersion="8.9.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.3.202411201858" AlpVersion="8.9.2">
 <Model>
 	<Id>1732135662243</Id>
 	<Name><![CDATA[chirurgia]]></Name>
@@ -1521,6 +1521,37 @@
 					</Properties>
 					<Action><![CDATA[listboxBLE.setItems(getPatientListBLE().toArray(new String[0]));]]></Action>
 				</Event>
+				<Event>
+					<Id>1740565490755</Id>
+					<Name><![CDATA[event]]></Name>
+					<X>1560</X><Y>1320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1695801600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[5000000]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[5]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[connections.send(Map.of("type","car","speed",12,"x",0,"y",0), bridgeConnection);]]></Action>
+				</Event>
 			</Events>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -1833,6 +1864,24 @@ return displayItems;]]></Body>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[position]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[distance]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[router]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[bleConnected]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[secCounter]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[id]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -2044,7 +2093,9 @@ return displayItems;]]></Body>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.position = "queue";]]></Code>
+								<Code><![CDATA[agent.position = "queue";
+
+connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname","Sempronio","surgery","Operazione ortopedica"), bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -8494,7 +8545,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						<Code><![CDATA[routerLocations.getValues().length]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
+					<InEnvironment>true</InEnvironment>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[routerLocations.getArguments()[index]]]></Code>
@@ -8805,6 +8856,61 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1740565395786</Id>
+					<Name><![CDATA[bridgeConnection]]></Name>
+					<X>1560</X><Y>1280</Y>
+					<Label><X>20</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[BridgeConnection]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[BridgeConnection]]></ClassName>
+							<ItemName><![CDATA[1740565145800]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[ip]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[remotePort]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[localPort]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
@@ -9574,7 +9680,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Line>
 					<Id>1732142255994</Id>
 					<Name><![CDATA[line11]]></Name>
@@ -9650,6 +9756,24 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 											</GenericParameterSubstituteReference>
 										</GenericParameterSubstitute>
 										<Parameters>
+											<Parameter>
+												<Name><![CDATA[position]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[distance]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[router]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bleConnected]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[secCounter]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[id]]></Name>
+											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
 										<Replication Class="CodeValue">
@@ -9878,6 +10002,24 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 											</GenericParameterSubstituteReference>
 										</GenericParameterSubstitute>
 										<Parameters>
+											<Parameter>
+												<Name><![CDATA[position]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[distance]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[router]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bleConnected]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[secCounter]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[id]]></Name>
+											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
 										<Replication Class="CodeValue">
@@ -10417,6 +10559,24 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 											</GenericParameterSubstituteReference>
 										</GenericParameterSubstitute>
 										<Parameters>
+											<Parameter>
+												<Name><![CDATA[position]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[distance]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[router]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bleConnected]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[secCounter]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[id]]></Name>
+											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
 										<Replication Class="CodeValue">
@@ -14407,7 +14567,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Figure3D>
 					<Id>1732197794586</Id>
 					<Name><![CDATA[bed1]]></Name>
@@ -14444,7 +14604,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Figure3D>
 					<Id>1732197796394</Id>
 					<Name><![CDATA[bed2]]></Name>
@@ -14481,7 +14641,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Figure3D>
 					<Id>1732197797771</Id>
 					<Name><![CDATA[bed3]]></Name>
@@ -14518,7 +14678,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Polyline>
 					<Id>1732198143676</Id>
 					<Name><![CDATA[polyline5]]></Name>
@@ -14747,7 +14907,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Control Type="ListBox">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1732229337475</Id>
@@ -14897,7 +15057,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Polyline>
 					<Id>1732284462194</Id>
 					<Name><![CDATA[polyline7]]></Name>
@@ -16307,6 +16467,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 		<ActiveObjectClass>
 			<Id>1732146481273</Id>
 			<Name><![CDATA[Patient]]></Name>
+			<StartupCode><![CDATA[id = BasicUtilities.getInstance().getNextInt();]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1732146481279</Id>
@@ -16517,6 +16678,30 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1740224393442</Id>
+					<Name><![CDATA[id]]></Name>
+					<X>50</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1740224393440</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Events>
 				<Event>
@@ -16661,7 +16846,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -16850,7 +17035,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -17035,7 +17220,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -17240,7 +17425,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -17425,7 +17610,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -17614,7 +17799,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Level>
@@ -17920,7 +18105,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 				<Oval>
 					<Id>1735174045652</Id>
 					<Name><![CDATA[oval]]></Name>
@@ -17944,6 +18129,357 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<FillMaterial>null</FillMaterial>
 				</Oval>
 			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1740565145805</Id>
+			<Name><![CDATA[BridgeConnection]]></Name>
+			<Import><![CDATA[import al.com.communicators.UDPCommunicator;
+import al.com.parsers.JsonParser;
+import al.com.communicators.Communicator;
+import al.com.communicators.UDPCommunicator;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+import java.util.stream.StreamSupport;]]></Import>
+			<StartupCode><![CDATA[try {
+	this.communicator = new UDPCommunicator(ip, localPort, remotePort);
+	this.communicator.setParser(new JsonParser());
+	this.communicator.addListener(this::onMessageFromBridge, Map.of());
+}
+catch (UnknownHostException e){
+	error(e, "Unknown host: "+ip);
+}
+catch (SocketException e) {
+	error(e, "Socket error");
+}]]></StartupCode>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1740565145800</Id>
+				<Name><![CDATA[1740565145800]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<NetworkType>USER_DEF</NetworkType>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1695715200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1740565145801</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1740565145815</CurrentLevel>
+			<ConnectionsId>1740565145826</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1740565145813</Id>
+					<Name><![CDATA[communicator]]></Name>
+					<X>50</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Communicator]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1740565145818</Id>
+					<Name><![CDATA[ip]]></Name>
+					<X>50</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[String]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA["localhost"]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1740565145816</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1740565145821</Id>
+					<Name><![CDATA[remotePort]]></Name>
+					<X>50</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[9876]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1740565145819</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1740565145824</Id>
+					<Name><![CDATA[localPort]]></Name>
+					<X>50</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[9877]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1740565145822</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1740565145807</Id>
+					<Name><![CDATA[onMessageReceived]]></Name>
+					<X>200</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[message]]></Name>
+						<Type><![CDATA[Map<String,? extends Object>]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (communicator != null) {
+	communicator.send(message);
+} else{
+	System.out.println("Communicator not yet initialized");
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1740565145809</Id>
+					<Name><![CDATA[onMessageFromBridge]]></Name>
+					<X>200</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[message]]></Name>
+						<Type><![CDATA[Map<String, ? extends Object>]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (message.get("id") instanceof String) {
+	int id = Integer.parseInt((String) message.get("id"));
+	StreamSupport.stream(getEngine().getRoot().agents().spliterator(), false).filter(a -> a.getId() == id).findFirst().ifPresentOrElse(
+	a -> {
+		agentLink.send(message, a);
+	}, 
+	() -> {
+		System.out.println("Agent with id "+id+" not found");
+	});
+} else if (message.get("type") instanceof String) {
+	String type = (String) message.get("type");
+	StreamSupport.stream(getEngine().getRoot().agents().spliterator(), false)
+	.filter(a -> a.getClass().getSimpleName().equals(type))
+	.forEach(a->agentLink.send(message, a));
+}]]></Body>
+				</Function>
+				<Function AccessType="public" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1740565145811</Id>
+					<Name><![CDATA[sendMessage]]></Name>
+					<X>200</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[message]]></Name>
+						<Type><![CDATA[Map<String,? extends Object>]]></Type>
+					</Parameter>
+					<Body><![CDATA[this.onMessageReceived(message);]]></Body>
+				</Function>
+			</Functions>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1740565145826</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<OnReceive><![CDATA[if (!msg.containsKey("id")){
+	msg = new HashMap(msg);
+	msg.put("id", sender.getId());
+}
+if (!msg.containsKey("type")){
+	msg = new HashMap(msg);
+	msg.put("type", sender.getClass().getSimpleName());
+}
+this.onMessageReceived(msg);]]></OnReceive>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Map<String, Object>]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+				<AgentLink>
+					<Id>1740565145828</Id>
+					<Name><![CDATA[agentLink]]></Name>
+					<X>200</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>false</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1740565396538</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1740565145815</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
 
 				</Level>
 			</Presentation>
@@ -17995,7 +18531,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 		<Outputs>
 		</Outputs>
 	</RunConfiguration>
-	<Experiments>	
+	<Experiments>
 		<!--   =========   Simulation Experiment   ========  -->
 		<SimulationExperiment ActiveObjectClassId="1732135662246">
 			<Id>1732135662255</Id>
@@ -18033,7 +18569,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				</Text>
 			</Presentation>
 
-			<Parameters>			
+			<Parameters>
 				<Parameter>
 					<ParameterName><![CDATA[arrivalRate]]></ParameterName>
 				</Parameter>
@@ -18058,25 +18594,182 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<Parameter>
 					<ParameterName><![CDATA[patientListBLE]]></ParameterName>
 				</Parameter>
-			</Parameters>			
+			</Parameters>
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<Title><![CDATA[chirurgia : Simulation]]></Title>	
+				<Title><![CDATA[chirurgia : Simulation]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>1.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Never]]></StopOption>
-				<InitialDate><![CDATA[1732060800000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1734652800000]]></FinalDate>	
-				<FinalTime><![CDATA[100.0]]></FinalTime>	
+				<InitialDate><![CDATA[1732060800000]]></InitialDate>
+				<InitialTime><![CDATA[0.0]]></InitialTime>
+				<FinalDate><![CDATA[1734652800000]]></FinalDate>
+				<FinalTime><![CDATA[100.0]]></FinalTime>
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
+	<JavaClasses>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1740140974498</Id>
+			<Name><![CDATA[MqttSender]]></Name>
+			<Text><![CDATA[/**
+ * MqttSender
+ */	
+
+import org.eclipse.paho.client.mqttv3.*;
+
+public class MqttSender implements Serializable {
+	
+	private String brokerAddress;
+	private String topic;
+	private String message;
+
+    /**
+     * Default constructor
+     */
+    public MqttSender(String brokerAddress, String topic) {
+    	this.brokerAddress = brokerAddress;
+        this.topic = topic;
+    }
+    
+    public void sendMessage(String message) throws MqttException {
+        this.message = message;
+
+        MqttClient client = new MqttClient(brokerAddress, "AnyLogicClient");
+        client.connect();
+
+        MqttMessage mqttMessage = new MqttMessage(this.message.getBytes());
+        client.publish(topic, mqttMessage);
+
+        client.disconnect();
+        client.close();
+    }
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * This number is here for model snapshot storing purpose<br>
+	 * It needs to be changed when this class gets changed
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1740152087106</Id>
+			<Name><![CDATA[AMQPConnection]]></Name>
+			<Text><![CDATA[/**
+ * AMQPConnection
+ */	
+import com.rabbitmq.client.BuiltinExchangeType;
+import com.rabbitmq.client.ConnectionFactory;
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
+
+public class AMQPConnection implements Serializable {
+
+	ConnectionFactory factory = new ConnectionFactory();
+	
+    /**
+     * Default constructor
+     */
+    public AMQPConnection() {
+    	factory.setUsername("user");
+        factory.setPassword("password");
+        factory.setVirtualHost("/");
+        factory.setHost("localhost");
+        factory.setPort(5672);
+    }
+    
+    public void sendMessage(String topic, String message) {
+    	try {
+    		com.rabbitmq.client.Connection connection = getConnection();
+            var channel = connection.createChannel();
+            channel.exchangeDeclare(topic, BuiltinExchangeType.TOPIC);
+            channel.basicPublish(topic, "from.me", null, message.getBytes());
+            System.out.printf("[%s] Sent message %s\n", "me", message);
+            channel.close();
+            connection.close();
+
+        } catch(Exception ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
+    public com.rabbitmq.client.Connection getConnection() throws IOException, TimeoutException {
+    	return factory.newConnection();
+    }
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * This number is here for model snapshot storing purpose<br>
+	 * It needs to be changed when this class gets changed
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}
+
+/*
+
+ * USAGE EXAMPLE ON AN AGENT
+
+AMQPConnection connection = new AMQPConnection();
+connection.sendMessage("messages", "paziente arrivato" + agent.id);
+
+*/]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1740224689053</Id>
+			<Name><![CDATA[BasicUtilities]]></Name>
+			<Text><![CDATA[/**
+ * BasicUtilities
+ */	
+public final class BasicUtilities {
+	
+	private static BasicUtilities INSTANCE;
+	Random rand = new Random();
+	
+    /**
+     * Default constructor
+     */
+    private BasicUtilities() {
+    }
+    
+    public static BasicUtilities getInstance() {
+        if(INSTANCE == null) {
+            INSTANCE = new BasicUtilities();
+        }
+        
+        return INSTANCE;
+    }
+    
+    public int getNextInt() {
+    	return rand.nextInt(0, 999);
+    }
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+}]]></Text>
+		</JavaClass>
+	</JavaClasses>
 	<ModelResources>
 		<Resource>
 			<Path><![CDATA[3d/reseption_1.dae]]></Path>
@@ -18128,6 +18821,21 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
+		<Resource>
+			<Path><![CDATA[org.eclipse.paho.client.mqttv3-1.2.2.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[amqp-client-5.14.0.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[shared.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
 	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
@@ -18141,5 +18849,29 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>5</VersionBuild>
     </RequiredLibraryReference>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[chirurgia]]></PackageName>
+			<ClassName><![CDATA[org.eclipse.paho.client.mqttv3-1.2.2.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[chirurgia]]></PackageName>
+			<ClassName><![CDATA[amqp-client-5.14.0.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[chirurgia]]></PackageName>
+			<ClassName><![CDATA[shared.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
 </Model>
 </AnyLogicWorkspace>
