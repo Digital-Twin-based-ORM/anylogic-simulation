@@ -8,3 +8,4 @@
 497.9992822821905 Paziente:895start operation
 1271.8770184813877 Paziente:896start operation
 233.38121153047985 Paziente:895start operation
+196.25412628266704 Paziente:896start operation
