@@ -51,3 +51,10 @@
 80.39104910042111 Paziente:1021start operation
 72.13826741774612 Paziente:1087start operation
 282.04742438373125 Paziente:1088start operation
+72.13826741774612 Paziente:1117start operation
+72.13826741774612 Paziente:1117start operation
+61.47824203111883 Paziente:1158start operation
+200.86254583734492 Paziente:1159start operation
+61.47824203111883 Paziente:1199start operation
+61.47824203111883 Paziente:1199start operation
+176.81002101047528 Paziente:1200start operation
