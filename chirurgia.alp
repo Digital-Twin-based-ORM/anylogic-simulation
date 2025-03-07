@@ -350,7 +350,7 @@
 				<Connector>
 					<Id>1732198801369</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>590</X><Y>1120</Y>
+					<X>560</X><Y>1120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -377,79 +377,13 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-100</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1732200885126</Id>
-					<Name><![CDATA[connector4]]></Name>
-					<X>740</X><Y>1200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToRoom]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[seizeRoom]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1732227309156</Id>
-					<Name><![CDATA[connector6]]></Name>
-					<X>830</X><Y>1200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[releaseNurse]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToRoom]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1732228729256</Id>
 					<Name><![CDATA[connector10]]></Name>
-					<X>250</X><Y>1620</Y>
+					<X>250</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -486,7 +420,7 @@
 				<Connector>
 					<Id>1732228874574</Id>
 					<Name><![CDATA[connector13]]></Name>
-					<X>810</X><Y>1680</Y>
+					<X>810</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -519,7 +453,7 @@
 				<Connector>
 					<Id>1732283366169</Id>
 					<Name><![CDATA[connector14]]></Name>
-					<X>250</X><Y>1740</Y>
+					<X>250</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -556,7 +490,7 @@
 				<Connector>
 					<Id>1732283557461</Id>
 					<Name><![CDATA[connector15]]></Name>
-					<X>350</X><Y>1740</Y>
+					<X>350</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -589,7 +523,7 @@
 				<Connector>
 					<Id>1732283599275</Id>
 					<Name><![CDATA[connector16]]></Name>
-					<X>450</X><Y>1740</Y>
+					<X>450</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -622,7 +556,7 @@
 				<Connector>
 					<Id>1734446074366</Id>
 					<Name><![CDATA[connector22]]></Name>
-					<X>110</X><Y>1560</Y>
+					<X>110</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -650,15 +584,15 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-50</X><Y>0</Y></Point>
-						<Point><X>-50</X><Y>-50</Y></Point>
-						<Point><X>870</X><Y>-50</Y></Point>
-						<Point><X>870</X><Y>-240</Y></Point>
+						<Point><X>-50</X><Y>-60</Y></Point>
+						<Point><X>870</X><Y>-60</Y></Point>
+						<Point><X>870</X><Y>-150</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1734446222034</Id>
 					<Name><![CDATA[connector23]]></Name>
-					<X>360</X><Y>1560</Y>
+					<X>360</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -691,7 +625,7 @@
 				<Connector>
 					<Id>1734446374352</Id>
 					<Name><![CDATA[connector25]]></Name>
-					<X>730</X><Y>1560</Y>
+					<X>730</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -724,7 +658,7 @@
 				<Connector>
 					<Id>1734446881721</Id>
 					<Name><![CDATA[connector27]]></Name>
-					<X>870</X><Y>1560</Y>
+					<X>870</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -757,7 +691,7 @@
 				<Connector>
 					<Id>1734446982817</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>350</X><Y>1620</Y>
+					<X>350</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -790,7 +724,7 @@
 				<Connector>
 					<Id>1734447116712</Id>
 					<Name><![CDATA[connector28]]></Name>
-					<X>390</X><Y>1620</Y>
+					<X>390</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -823,7 +757,7 @@
 				<Connector>
 					<Id>1734447501295</Id>
 					<Name><![CDATA[connector11]]></Name>
-					<X>440</X><Y>1680</Y>
+					<X>440</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -860,7 +794,7 @@
 				<Connector>
 					<Id>1734447592767</Id>
 					<Name><![CDATA[connector33]]></Name>
-					<X>480</X><Y>1680</Y>
+					<X>480</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -926,7 +860,7 @@
 				<Connector>
 					<Id>1735318589965</Id>
 					<Name><![CDATA[connector32]]></Name>
-					<X>540</X><Y>1740</Y>
+					<X>540</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -959,7 +893,7 @@
 				<Connector>
 					<Id>1736261669310</Id>
 					<Name><![CDATA[connector30]]></Name>
-					<X>840</X><Y>1620</Y>
+					<X>840</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -990,42 +924,9 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1736261698045</Id>
-					<Name><![CDATA[connector]]></Name>
-					<X>710</X><Y>1320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToChangeBed]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[losStart]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1736429162224</Id>
 					<Name><![CDATA[connector12]]></Name>
-					<X>710</X><Y>1680</Y>
+					<X>710</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1058,7 +959,7 @@
 				<Connector>
 					<Id>1736429162226</Id>
 					<Name><![CDATA[connector17]]></Name>
-					<X>680</X><Y>1680</Y>
+					<X>680</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1124,7 +1025,7 @@
 				<Connector>
 					<Id>1740736154049</Id>
 					<Name><![CDATA[connector34]]></Name>
-					<X>610</X><Y>1120</Y>
+					<X>580</X><Y>1120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1151,40 +1052,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>50</X><Y>80</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1740747711327</Id>
-					<Name><![CDATA[connector5]]></Name>
-					<X>910</X><Y>1200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[waitOperationSchedule]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[releaseNurse]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>80</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1221,7 +1089,7 @@
 						<Point><X>-20</X><Y>-70</Y></Point>
 						<Point><X>730</X><Y>-70</Y></Point>
 						<Point><X>730</X><Y>-120</Y></Point>
-						<Point><X>670</X><Y>-120</Y></Point>
+						<Point><X>710</X><Y>-120</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1291,42 +1159,9 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1741191645492</Id>
-					<Name><![CDATA[connector43]]></Name>
-					<X>900</X><Y>1320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[holdAssistant]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[releaseStretcherBearer]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1741193543890</Id>
 					<Name><![CDATA[connector19]]></Name>
-					<X>250</X><Y>1560</Y>
+					<X>250</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1392,7 +1227,7 @@
 				<Connector>
 					<Id>1741193811239</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>610</X><Y>1560</Y>
+					<X>610</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1425,7 +1260,7 @@
 				<Connector>
 					<Id>1741193811241</Id>
 					<Name><![CDATA[connector24]]></Name>
-					<X>490</X><Y>1560</Y>
+					<X>490</X><Y>1470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1522,75 +1357,9 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1741275257584</Id>
-					<Name><![CDATA[connector37]]></Name>
-					<X>750</X><Y>1320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[moveToChangeBed]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[MoveTo]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[holdSurgeon]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>30</X><Y>70</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1741275257586</Id>
-					<Name><![CDATA[connector39]]></Name>
-					<X>860</X><Y>1350</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[holdAnesthesiologist]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[holdAssistant]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>20</X><Y>-30</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1741276698890</Id>
 					<Name><![CDATA[connector31]]></Name>
-					<X>800</X><Y>1390</Y>
+					<X>410</X><Y>1790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1617,7 +1386,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>-40</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -1689,7 +1458,7 @@
 				<Connector>
 					<Id>1741342504498</Id>
 					<Name><![CDATA[connector29]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>0</X><Y>-90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1722,7 +1491,7 @@
 				<Connector>
 					<Id>1741342504500</Id>
 					<Name><![CDATA[connector38]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>0</X><Y>-90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1750,6 +1519,270 @@
 					<Points>
 						<Point><X>630</X><Y>1620</Y></Point>
 						<Point><X>570</X><Y>1620</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741360869324</Id>
+					<Name><![CDATA[connector5]]></Name>
+					<X>690</X><Y>1200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToRoom]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[seizeRoom]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Seize]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741361075967</Id>
+					<Name><![CDATA[connector6]]></Name>
+					<X>780</X><Y>1200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[releaseNurse]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Release]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToRoom]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741361300350</Id>
+					<Name><![CDATA[connector4]]></Name>
+					<X>950</X><Y>1200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[waitOperationSchedule]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[hospitalizationDelay]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-60</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741361300352</Id>
+					<Name><![CDATA[connector42]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[hospitalizationDelay]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[releaseNurse]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Release]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>850</X><Y>1200</Y></Point>
+						<Point><X>820</X><Y>1200</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741361659687</Id>
+					<Name><![CDATA[connector37]]></Name>
+					<X>830</X><Y>1320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToChangeBed]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[holdEquipe]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741361659689</Id>
+					<Name><![CDATA[connector39]]></Name>
+					<X>890</X><Y>1320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[holdEquipe]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[releaseStretcherBearer]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Release]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741363002305</Id>
+					<Name><![CDATA[connector]]></Name>
+					<X>790</X><Y>1320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[moveToChangeBed]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[acceptanceTime]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1741363002307</Id>
+					<Name><![CDATA[connector43]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[acceptanceTime]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[losStart]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[TimeMeasureStart]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>700</X><Y>1320</Y></Point>
+						<Point><X>670</X><Y>1320</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1853,6 +1886,7 @@
 				<Event>
 					<Id>1740739568382</Id>
 					<Name><![CDATA[timeUpdate]]></Name>
+					<Description><![CDATA[Time update event used to recalculate every second all the temporal hold blocks, that are based on a datetime condition.]]></Description>
 					<X>1240</X><Y>1330</Y>
 					<Label><X>15</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1880,7 +1914,9 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[holdAdmissionTime.recalculateConditions();]]></Action>
+					<Action><![CDATA[holdAdmissionTime.recalculateConditions();
+waitOperationSchedule.recalculateConditions();
+holdEquipe.recalculateConditions();]]></Action>
 				</Event>
 			</Events>
 			<Functions>
@@ -2008,7 +2044,7 @@ return displayItems;]]></Body>
 				<Schedule>
 					<Id>1741089852289</Id>
 					<Name><![CDATA[schedule]]></Name>
-					<X>70</X><Y>1740</Y>
+					<X>120</X><Y>1890</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2167,7 +2203,7 @@ return displayItems;]]></Body>
 						<Parameter>
 							<Name><![CDATA[databaseTable]]></Name>
 							<Value Class="DatabaseContextTableCodeValue">
-								<Id>1741339566786</Id>
+								<Id>1741360029657</Id>
 								<TableReference>
 									<PackageName><![CDATA[chirurgia]]></PackageName>
 									<ClassName><![CDATA[arrivals_schedule]]></ClassName>
@@ -2189,6 +2225,9 @@ return displayItems;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[limitArrivals]]></Name>
@@ -2256,7 +2295,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566794</Id>
+									<Id>1741360029665</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -2305,7 +2344,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566793</Id>
+										<Id>1741360029664</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -2335,6 +2374,18 @@ return displayItems;]]></Body>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
 												<ClassName><![CDATA[arrivals_schedule]]></ClassName>
 												<ItemName><![CDATA[admission_time]]></ItemName>
+											</Value>
+										</Item>
+										<Item>
+											<Key>
+												<PackageName><![CDATA[chirurgia]]></PackageName>
+												<ClassName><![CDATA[Patient]]></ClassName>
+												<ItemName><![CDATA[operation_time]]></ItemName>
+											</Key>
+											<Value>
+												<PackageName><![CDATA[chirurgia]]></PackageName>
+												<ClassName><![CDATA[arrivals_schedule]]></ClassName>
+												<ItemName><![CDATA[programmed_surgery]]></ItemName>
 											</Value>
 										</Item>
 									</ParameterToDatabaseColumnMapping>
@@ -2925,7 +2976,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732198799407</Id>
 					<Name><![CDATA[acceptanceTime]]></Name>
-					<X>300</X><Y>1180</Y>
+					<X>700</X><Y>1300</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3069,7 +3120,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566802</Id>
+									<Id>1741360029673</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -3100,7 +3151,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566801</Id>
+										<Id>1741360029672</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -3564,7 +3615,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732200682734</Id>
 					<Name><![CDATA[seizeRoom]]></Name>
-					<X>660</X><Y>1180</Y>
+					<X>620</X><Y>1180</Y>
 					<Label><X>-10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3774,7 +3825,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732200881320</Id>
 					<Name><![CDATA[moveToRoom]]></Name>
-					<X>740</X><Y>1180</Y>
+					<X>690</X><Y>1180</Y>
 					<Label><X>-15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3922,8 +3973,8 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732201068397</Id>
 					<Name><![CDATA[hospitalizationDelay]]></Name>
-					<X>440</X><Y>1180</Y>
-					<Label><X>-35</X><Y>0</Y></Label>
+					<X>850</X><Y>1180</Y>
+					<Label><X>-35</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3945,7 +3996,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
+								<Code><![CDATA[0]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -4011,7 +4062,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732227305390</Id>
 					<Name><![CDATA[releaseNurse]]></Name>
-					<X>830</X><Y>1180</Y>
+					<X>780</X><Y>1180</Y>
 					<Label><X>-20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4379,7 +4430,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566810</Id>
+									<Id>1741360029681</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Surgeon]]></ClassName>
@@ -4410,7 +4461,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566809</Id>
+										<Id>1741360029680</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4621,7 +4672,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228253138</Id>
 					<Name><![CDATA[moveToOperatingRoom]]></Name>
-					<X>870</X><Y>1540</Y>
+					<X>870</X><Y>1450</Y>
 					<Label><X>-40</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4772,7 +4823,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228469086</Id>
 					<Name><![CDATA[operationDelay]]></Name>
-					<X>250</X><Y>1600</Y>
+					<X>250</X><Y>1510</Y>
 					<Label><X>-10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4796,7 +4847,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[triangular( 5, 10, 15 )]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -4861,7 +4912,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228727051</Id>
 					<Name><![CDATA[releaseRooms]]></Name>
-					<X>530</X><Y>1600</Y>
+					<X>530</X><Y>1510</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4958,7 +5009,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228751861</Id>
 					<Name><![CDATA[moveToRoom2]]></Name>
-					<X>610</X><Y>1660</Y>
+					<X>610</X><Y>1570</Y>
 					<Label><X>-20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5109,7 +5160,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228798618</Id>
 					<Name><![CDATA[releaseNurse2]]></Name>
-					<X>710</X><Y>1660</Y>
+					<X>710</X><Y>1570</Y>
 					<Label><X>-20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5206,7 +5257,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732228872325</Id>
 					<Name><![CDATA[postOperationDelay]]></Name>
-					<X>810</X><Y>1660</Y>
+					<X>810</X><Y>1570</Y>
 					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5295,7 +5346,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732283364458</Id>
 					<Name><![CDATA[seizeNurse3]]></Name>
-					<X>250</X><Y>1720</Y>
+					<X>250</X><Y>1630</Y>
 					<Label><X>-10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5508,7 +5559,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732283551166</Id>
 					<Name><![CDATA[moveToExitDoor]]></Name>
-					<X>350</X><Y>1720</Y>
+					<X>350</X><Y>1630</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5650,7 +5701,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732283594430</Id>
 					<Name><![CDATA[releaseAll]]></Name>
-					<X>450</X><Y>1720</Y>
+					<X>450</X><Y>1630</Y>
 					<Label><X>-20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5741,7 +5792,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1732283662920</Id>
 					<Name><![CDATA[leave]]></Name>
-					<X>540</X><Y>1730</Y>
+					<X>540</X><Y>1640</Y>
 					<Label><X>-10</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5851,7 +5902,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566818</Id>
+									<Id>1741360029689</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -5882,7 +5933,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566817</Id>
+										<Id>1741360029688</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6151,7 +6202,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566826</Id>
+									<Id>1741360029697</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -6178,7 +6229,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566825</Id>
+										<Id>1741360029696</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6443,7 +6494,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566834</Id>
+									<Id>1741360029705</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[StretcherBearer]]></ClassName>
@@ -6474,7 +6525,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566833</Id>
+										<Id>1741360029704</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6682,7 +6733,7 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 				<EmbeddedObject>
 					<Id>1734444887106</Id>
 					<Name><![CDATA[moveToChangeBed]]></Name>
-					<X>710</X><Y>1300</Y>
+					<X>790</X><Y>1300</Y>
 					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6790,7 +6841,10 @@ connections.send(Map.of("id", agent.id, "type","patient","name","Tipo","surname"
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.position = "going to change bed";
-log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code>
+log.println(time() + " Paziente:" + agent.getId() + "start operation");
+
+Boolean returnValue = (agent.surgeon_ready && agent.anesthesiologist_ready && agent.assistant_ready);
+traceln("EQUIPE READY: " + returnValue);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -6931,7 +6985,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734445109133</Id>
 					<Name><![CDATA[moveToChangeBedOperation]]></Name>
-					<X>110</X><Y>1540</Y>
+					<X>110</X><Y>1450</Y>
 					<Label><X>-55</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7134,7 +7188,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566842</Id>
+									<Id>1741360029713</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Assistant]]></ClassName>
@@ -7165,7 +7219,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566841</Id>
+										<Id>1741360029712</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -7586,7 +7640,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734446219792</Id>
 					<Name><![CDATA[moveToPreparationRoom]]></Name>
-					<X>360</X><Y>1540</Y>
+					<X>360</X><Y>1450</Y>
 					<Label><X>-50</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7737,7 +7791,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734446262618</Id>
 					<Name><![CDATA[delayAnesthesia]]></Name>
-					<X>610</X><Y>1540</Y>
+					<X>610</X><Y>1450</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7826,7 +7880,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734446371653</Id>
 					<Name><![CDATA[releaseAnesthesiologist]]></Name>
-					<X>730</X><Y>1540</Y>
+					<X>730</X><Y>1450</Y>
 					<Label><X>-40</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8352,7 +8406,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734446980374</Id>
 					<Name><![CDATA[resourceSendToSterilizationRoom]]></Name>
-					<X>350</X><Y>1600</Y>
+					<X>350</X><Y>1510</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8425,7 +8479,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734447292614</Id>
 					<Name><![CDATA[moveToChangeBedReturn]]></Name>
-					<X>730</X><Y>1600</Y>
+					<X>730</X><Y>1510</Y>
 					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8573,7 +8627,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734447340997</Id>
 					<Name><![CDATA[releaseAssistant]]></Name>
-					<X>490</X><Y>1540</Y>
+					<X>490</X><Y>1450</Y>
 					<Label><X>-25</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8676,7 +8730,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734447393153</Id>
 					<Name><![CDATA[seizeStretcherBearerReturn]]></Name>
-					<X>840</X><Y>1600</Y>
+					<X>840</X><Y>1510</Y>
 					<Label><X>-15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8889,7 +8943,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1734447556489</Id>
 					<Name><![CDATA[moveToChangeBedDepartment]]></Name>
-					<X>440</X><Y>1660</Y>
+					<X>440</X><Y>1570</Y>
 					<Label><X>-35</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9161,7 +9215,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1735318587764</Id>
 					<Name><![CDATA[losEnd]]></Name>
-					<X>660</X><Y>1660</Y>
+					<X>660</X><Y>1570</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9469,7 +9523,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1740735887509</Id>
 					<Name><![CDATA[holdAdmissionTime]]></Name>
-					<X>590</X><Y>1110</Y>
+					<X>560</X><Y>1110</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9526,67 +9580,6 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 					<InitializationType>SPECIFIED_NUMBER</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<Id>1732135649868</Id>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1740747709654</Id>
-					<Name><![CDATA[waitOperationSchedule]]></Name>
-					<X>910</X><Y>1190</Y>
-					<Label><X>-30</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Hold]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Hold]]></ClassName>
-							<ItemName><![CDATA[1412336242940]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[mode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[nEntitiesForSelfBlock]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[condition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[initiallyBlocked]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<Id>1732135649867</Id>
 						<TableReference>
 						</TableReference>
 					</InitializationDatabaseTableQuery>
@@ -9757,7 +9750,10 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						<Parameter>
 							<Name><![CDATA[onSeizeUnit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[send(agent.recovery_room, unit);]]></Code>
+								<Code><![CDATA[if(unit instanceof Anesthesiologist) {
+	((Anesthesiologist) unit).patient = agent;
+}
+send(agent.recovery_room, unit);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9970,7 +9966,10 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						<Parameter>
 							<Name><![CDATA[onSeizeUnit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[send("seized", unit);]]></Code>
+								<Code><![CDATA[if(unit instanceof Assistant) {
+	((Assistant) unit).patient = agent;
+}
+send("seized", unit);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -10239,7 +10238,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1741177470553</Id>
 					<Name><![CDATA[holdAssistant]]></Name>
-					<X>880</X><Y>1310</Y>
+					<X>530</X><Y>1780</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10303,7 +10302,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1741193541756</Id>
 					<Name><![CDATA[resourceAttach1]]></Name>
-					<X>250</X><Y>1540</Y>
+					<X>250</X><Y>1450</Y>
 					<Label><X>-30</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10370,7 +10369,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 				<EmbeddedObject>
 					<Id>1741194147979</Id>
 					<Name><![CDATA[holdAnesthesiologist]]></Name>
-					<X>840</X><Y>1340</Y>
+					<X>480</X><Y>1780</Y>
 					<Label><X>-15</X><Y>-5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10398,6 +10397,9 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initiallyBlocked]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
@@ -10492,7 +10494,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566850</Id>
+									<Id>1741360029721</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -10519,7 +10521,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566849</Id>
+										<Id>1741360029720</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -10787,7 +10789,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1741339566858</Id>
+									<Id>1741360029729</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -10814,7 +10816,7 @@ log.println(time() + " Paziente:" + agent.getId() + "start operation");]]></Code
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1741339566857</Id>
+										<Id>1741360029728</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -11454,7 +11456,7 @@ if(nameLocation.contains("prep")) {
 				<EmbeddedObject>
 					<Id>1741276696582</Id>
 					<Name><![CDATA[holdSurgeon]]></Name>
-					<X>780</X><Y>1380</Y>
+					<X>390</X><Y>1780</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11482,6 +11484,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initiallyBlocked]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
@@ -12175,7 +12180,10 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[onSeizeUnit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[send(agent.operating_room, unit);]]></Code>
+								<Code><![CDATA[if(unit instanceof Surgeon) {
+	((Surgeon) unit).patient = agent;
+}
+send(agent.operating_room, unit);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12231,7 +12239,7 @@ if(nameLocation.contains("prep")) {
 				<EmbeddedObject>
 					<Id>1741342502669</Id>
 					<Name><![CDATA[releaseSurgeon]]></Name>
-					<X>630</X><Y>1600</Y>
+					<X>630</X><Y>1510</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -12321,6 +12329,143 @@ if(nameLocation.contains("prep")) {
 					<InitializationType>SPECIFIED_NUMBER</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<Id>1741342502667</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1741360573241</Id>
+					<Name><![CDATA[waitOperationSchedule]]></Name>
+					<X>950</X><Y>1190</Y>
+					<Label><X>-10</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Hold]]></ClassName>
+							<ItemName><![CDATA[1412336242940]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[mode]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.CONDITIONAL]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[nEntitiesForSelfBlock]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[getExperiment().date().before(agent.operation_time)]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initiallyBlocked]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1741360573239</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1741361658612</Id>
+					<Name><![CDATA[holdEquipe]]></Name>
+					<X>870</X><Y>1310</Y>
+					<Label><X>-10</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Hold]]></ClassName>
+							<ItemName><![CDATA[1412336242940]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[mode]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.CONDITIONAL]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[nEntitiesForSelfBlock]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.equipeReady]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initiallyBlocked]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1741361658610</Id>
 						<TableReference>
 						</TableReference>
 					</InitializationDatabaseTableQuery>
@@ -13143,7 +13288,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1741339566866</Id>
+										<Id>1741360029737</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -13192,7 +13337,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1741339566865</Id>
+											<Id>1741360029736</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -13393,7 +13538,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1741339566874</Id>
+										<Id>1741360029745</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -13442,7 +13587,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1741339566873</Id>
+											<Id>1741360029744</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -13956,7 +14101,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1741339566882</Id>
+										<Id>1741360029753</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -14005,7 +14150,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1741339566881</Id>
+											<Id>1741360029752</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -16709,7 +16854,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1741339566890</Id>
+										<Id>1741360029761</Id>
 										<GenericParameterSubstitute>
 											<GenericParameterSubstituteReference>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -16736,7 +16881,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1741339566889</Id>
+											<Id>1741360029760</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -20070,6 +20215,21 @@ if(nameLocation.contains("prep")) {
 			<CurrentLevel>1732146481280</CurrentLevel>
 			<ConnectionsId>1732146481274</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1741363349338</Id>
+					<Name><![CDATA[equipeReady]]></Name>
+					<X>260</X><Y>390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[surgeon_ready && assistant_ready && anesthesiologist_ready]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1732231385723</Id>
 					<Name><![CDATA[position]]></Name>
@@ -20193,7 +20353,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1740224393442</Id>
 					<Name><![CDATA[id]]></Name>
-					<X>50</X><Y>180</Y>
+					<X>50</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20217,7 +20377,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1740737689115</Id>
 					<Name><![CDATA[admission_time]]></Name>
-					<X>50</X><Y>210</Y>
+					<X>50</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20238,7 +20398,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1741256553337</Id>
 					<Name><![CDATA[recovery_room]]></Name>
-					<X>50</X><Y>240</Y>
+					<X>50</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20262,7 +20422,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1741276781529</Id>
 					<Name><![CDATA[operating_room]]></Name>
-					<X>59</X><Y>271</Y>
+					<X>50</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20277,6 +20437,99 @@ if(nameLocation.contains("prep")) {
 						<ParameterEditor>
 							<Id>1741276781527</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1741343310275</Id>
+					<Name><![CDATA[operation_time]]></Name>
+					<X>180</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Date]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1741343310273</Id>
+							<EditorContolType>CALENDAR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1741361757952</Id>
+					<Name><![CDATA[surgeon_ready]]></Name>
+					<X>50</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1741361757950</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1741361762655</Id>
+					<Name><![CDATA[assistant_ready]]></Name>
+					<X>50</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1741361762653</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1741361765486</Id>
+					<Name><![CDATA[anesthesiologist_ready]]></Name>
+					<X>50</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1741361765484</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -20795,6 +21048,29 @@ if(nameLocation.contains("prep")) {
 			</ScaleRuler>
 			<CurrentLevel>1732227886545</CurrentLevel>
 			<ConnectionsId>1732227886539</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1741351390412</Id>
+					<Name><![CDATA[patient]]></Name>
+					<X>30</X><Y>70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Patient]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1741351390410</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1741277049003</Id>
@@ -20817,7 +21093,7 @@ if(nameLocation.contains("prep")) {
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="130" Height="30">
-						<EntryAction><![CDATA[traceln("Chirurgo in sala 1...");
+						<EntryAction><![CDATA[traceln("Chirurgo in sala 1... per paziente " + patient.id);
 Main mainAgent = (Main)getEngine().getRoot();
 moveTo(mainAgent.operatingRoom1);]]></EntryAction>
 						<FillColor/>
@@ -20848,7 +21124,8 @@ moveTo(mainAgent.operatingRoom2);]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[Main mainAgent = (Main)getEngine().getRoot();
-mainAgent.holdSurgeon.unblock();]]></EntryAction>
+//mainAgent.holdSurgeon.unblock();
+patient.surgeon_ready = true;]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -21209,50 +21486,30 @@ mainAgent.holdSurgeon.unblock();]]></EntryAction>
 			</ScaleRuler>
 			<CurrentLevel>1734433839997</CurrentLevel>
 			<ConnectionsId>1734433839991</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1741362057038</Id>
+					<Name><![CDATA[patient]]></Name>
+					<X>30</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Patient]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1741362057036</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<StatechartElements>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1741194023172</Id>
-					<Name><![CDATA[Idle]]></Name>
-					<X>913</X><Y>1360</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[traceln("Assistente pronto");]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1741194023175</Id>
-					<Name><![CDATA[GoingToChangeBed]]></Name>
-					<X>883</X><Y>1440</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="130" Height="30">
-						<EntryAction><![CDATA[traceln("Assistente partito");
-Main mainAgent = (Main)getEngine().getRoot();
-moveTo(mainAgent.changeBedOperation);]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1741194023177</Id>
-					<Name><![CDATA[InChangeBed]]></Name>
-					<X>1083</X><Y>1440</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[traceln("Assistente arrivato");
-Main mainAgent = (Main)getEngine().getRoot();
-mainAgent.holdAssistant.unblock();]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1741194026604</Id>
 					<Name><![CDATA[Idle1]]></Name>
@@ -21292,7 +21549,8 @@ moveTo(mainAgent.preparationRoom2);]]></EntryAction>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[traceln("Anestesista arrivato");
 Main mainAgent = (Main)getEngine().getRoot();
-mainAgent.holdAnesthesiologist.unblock();]]></EntryAction>
+//mainAgent.holdAnesthesiologist.unblock();
+patient.anesthesiologist_ready = true;]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -21310,111 +21568,6 @@ Main mainAgent = (Main)getEngine().getRoot();
 moveTo(mainAgent.preparationRoom1);]]></EntryAction>
 						<FillColor/>
 					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
-					<Id>1741194023179</Id>
-					<Name><![CDATA[statechart]]></Name>
-					<X>963</X><Y>1320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>40</Y></Point>
-					</Points>
-					<Properties Target="1741194023172">
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1741194023181</Id>
-					<Name><![CDATA[transition]]></Name>
-					<X>953</X><Y>1390</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>50</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1741194023172" Target="1741194023175" Trigger="message">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[String]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[equalsTo]]></FilterType>
-						<EqualsExpression><![CDATA["seized"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1741194023183</Id>
-					<Name><![CDATA[transition1]]></Name>
-					<X>1013</X><Y>1460</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1741194023175" Target="1741194023177" Trigger="arrival">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1741194023185</Id>
-					<Name><![CDATA[transition2]]></Name>
-					<X>1133</X><Y>1440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-120</X><Y>-60</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1741194023177" Target="1741194023172" Trigger="message">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[equalsTo]]></FilterType>
-						<EqualsExpression><![CDATA["release"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1741194026610</Id>
@@ -21595,11 +21748,6 @@ moveTo(mainAgent.preparationRoom1);]]></EntryAction>
 					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
 					<AgentLinkBidirectional>true</AgentLinkBidirectional>
 					<MessageType><![CDATA[Object]]></MessageType>
-					<StatechartReference>
-						<PackageName><![CDATA[chirurgia]]></PackageName>
-						<ClassName><![CDATA[Anesthesiologist]]></ClassName>
-						<ItemName><![CDATA[statechart]]></ItemName>
-					</StatechartReference>
 					<StatechartReference>
 						<PackageName><![CDATA[chirurgia]]></PackageName>
 						<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -21984,6 +22132,29 @@ moveTo(mainAgent.preparationRoom1);]]></EntryAction>
 			</ScaleRuler>
 			<CurrentLevel>1734445850307</CurrentLevel>
 			<ConnectionsId>1734445850301</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1741362091600</Id>
+					<Name><![CDATA[patient]]></Name>
+					<X>30</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Patient]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1741362091598</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1741175498962</Id>
@@ -22024,7 +22195,8 @@ moveTo(mainAgent.changeBedOperation);]]></EntryAction>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[traceln("Assistente arrivato");
 Main mainAgent = (Main)getEngine().getRoot();
-mainAgent.holdAssistant.unblock();]]></EntryAction>
+//mainAgent.holdAssistant.unblock();
+patient.assistant_ready = true;]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
