@@ -86,3 +86,9 @@
 145.19873783638556 Paziente:1333start operation
 375.17624470799785 Paziente:1332start operation
 6755.5121485045975 Paziente:1334start operation
+145.19873783638556 Paziente:1333start operation
+145.19873783638556 Paziente:1333start operation
+145.19873783638556 Paziente:1333start operation
+365.6280067839573 Paziente:1332start operation
+145.19873783638556 Paziente:1333start operation
+145.19873783638556 Paziente:1333start operation
