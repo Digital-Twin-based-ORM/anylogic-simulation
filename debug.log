@@ -23,3 +23,4 @@
 [0316/111520.300:INFO:CONSOLE(3660)] "THREE.ColladaLoader: File version 1.4.0", source: file:///C:/Program%20Files/AnyLogic%208.9%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.9.4.202503030442/static/libs/ColladaLoader.js (3660)
 [0316/111520.342:INFO:CONSOLE(255)] "Loaded: file:D:/Universita/Magistrale/Tesi/AnyLogic/anylogic-simulation/3d/patient_2_state_1.dae", source: file:///C:/Program%20Files/AnyLogic%208.9%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.9.4.202503030442/static/init.js (255)
 [0316/111520.342:INFO:CONSOLE(271)] "load end: file:D:/Universita/Magistrale/Tesi/AnyLogic/anylogic-simulation/3d/patient_2_state_1.dae", source: file:///C:/Program%20Files/AnyLogic%208.9%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.9.4.202503030442/static/init.js (271)
+[0316/111710.156:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
