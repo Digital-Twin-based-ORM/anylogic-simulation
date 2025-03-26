@@ -94,3 +94,9 @@
 145.19873783638556 Paziente:1333start operation
 161.75954996620447 Paziente:1460start operation
 347.161622040761 Paziente:1461start operation
+166.06191963866252 Paziente:1349start operation
+358.09712247077493 Paziente:1350start operation
+2388.3966208466995 Paziente:1351start operation
+2739.5267870438997 Paziente:1352start operation
+4347.882863254378 Paziente:1353start operation
+4867.640969897978 Paziente:1354start operation
