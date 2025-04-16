@@ -100,3 +100,5 @@
 2739.5267870438997 Paziente:1352start operation
 4347.882863254378 Paziente:1353start operation
 4867.640969897978 Paziente:1354start operation
+114.8497984056863 Paziente:1349start operation
+250.8929250338873 Paziente:1350start operation
