@@ -102,3 +102,11 @@
 4867.640969897978 Paziente:1354start operation
 114.8497984056863 Paziente:1349start operation
 250.8929250338873 Paziente:1350start operation
+155.88131014043586 Paziente:1397start operation
+155.88131014043586 Paziente:1397start operation
+155.88131014043586 Paziente:1397start operation
+213.4795735643537 Paziente:1397start operation
+213.4795735643537 Paziente:1397start operation
+173.66072710839677 Paziente:1397start operation
+173.66072710839677 Paziente:1397start operation
+173.66072710839677 Paziente:1397start operation
