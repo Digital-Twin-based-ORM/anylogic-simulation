@@ -2671,7 +2671,7 @@ return displayItems;]]></Body>
 						<Parameter>
 							<Name><![CDATA[databaseTable]]></Name>
 							<Value Class="DatabaseContextTableCodeValue">
-								<Id>1745830638191</Id>
+								<Id>1747205838722</Id>
 								<TableReference>
 									<PackageName><![CDATA[chirurgia]]></PackageName>
 									<ClassName><![CDATA[arrivals_schedule]]></ClassName>
@@ -2763,7 +2763,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638199</Id>
+									<Id>1747205838730</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -2812,7 +2812,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638198</Id>
+										<Id>1747205838729</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -3363,7 +3363,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638207</Id>
+									<Id>1747205838738</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -3394,7 +3394,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638206</Id>
+										<Id>1747205838737</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4463,7 +4463,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638215</Id>
+									<Id>1747205838746</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Surgeon]]></ClassName>
@@ -4494,7 +4494,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638214</Id>
+										<Id>1747205838745</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -5176,7 +5176,8 @@ agent.updatePhysicalAsset();]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.set_position("room");]]></Code>
+								<Code><![CDATA[agent.set_position("room");
+// TODO ingresso in reparto]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5959,7 +5960,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638223</Id>
+									<Id>1747205838754</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -5990,7 +5991,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638222</Id>
+										<Id>1747205838753</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6256,7 +6257,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638231</Id>
+									<Id>1747205838762</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[StretcherBearer]]></ClassName>
@@ -6287,7 +6288,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638230</Id>
+										<Id>1747205838761</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6612,7 +6613,8 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.set_position("change bed room");]]></Code>
+								<Code><![CDATA[agent.set_position("change bed room");
+// TODO uscita dal reparto]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -6859,6 +6861,9 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[// TODO ingresso al filtro]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -6950,7 +6955,7 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638239</Id>
+									<Id>1747205838770</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Assistant]]></ClassName>
@@ -6981,7 +6986,7 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638238</Id>
+										<Id>1747205838769</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -7299,7 +7304,8 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.position = "going to preparation room";]]></Code>
+								<Code><![CDATA[agent.position = "going to preparation room";
+// TODO ingresso al blocco operatorio]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -7730,7 +7736,8 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.set_position("change bed operation room");]]></Code>
+								<Code><![CDATA[agent.set_position("change bed operation room");
+// TODO uscita dal blocco operatorio]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -8226,7 +8233,7 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 				<EmbeddedObject>
 					<Id>1735176599835</Id>
 					<Name><![CDATA[routerBLEs]]></Name>
-					<X>1260</X><Y>1300</Y>
+					<X>1900</X><Y>1360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8634,7 +8641,7 @@ traceln("EQUIPE READY: " + returnValue);]]></Code>
 				<EmbeddedObject>
 					<Id>1740565395786</Id>
 					<Name><![CDATA[bridgeConnection]]></Name>
-					<X>1550</X><Y>1300</Y>
+					<X>1260</X><Y>1320</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9542,7 +9549,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638247</Id>
+									<Id>1747205838778</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9569,7 +9576,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638246</Id>
+										<Id>1747205838777</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -9837,7 +9844,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638255</Id>
+									<Id>1747205838786</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9864,7 +9871,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638254</Id>
+										<Id>1747205838785</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -12688,7 +12695,8 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.set_position("room");]]></Code>
+								<Code><![CDATA[agent.set_position("room");
+// TODO ingresso in reparto]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13321,7 +13329,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638263</Id>
+									<Id>1747205838794</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -13352,7 +13360,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638262</Id>
+										<Id>1747205838793</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13498,7 +13506,7 @@ agent.priority = 1;]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638271</Id>
+									<Id>1747205838802</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -13529,7 +13537,7 @@ agent.priority = 1;]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638270</Id>
+										<Id>1747205838801</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -14022,7 +14030,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1745830638279</Id>
+									<Id>1747205838810</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -14049,7 +14057,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1745830638278</Id>
+										<Id>1747205838809</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -14775,6 +14783,603 @@ if(nameLocation.contains("prep")) {
 					<InitializationType>SPECIFIED_NUMBER</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<Id>1745248658430</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747127546655</Id>
+					<Name><![CDATA[routerBLE_inSI_1]]></Name>
+					<X>1900</X><Y>1430</Y>
+					<Label><X>-55</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747127548918</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1080]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[435]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["R"]]></Code>
+							</Value>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747127546653</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747145707001</Id>
+					<Name><![CDATA[routerBLE_inSI_2]]></Name>
+					<X>2000</X><Y>1430</Y>
+					<Label><X>-45</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747145709972</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[940]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[435]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747145706999</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747145753359</Id>
+					<Name><![CDATA[routerBLE_inSI_3]]></Name>
+					<X>2100</X><Y>1430</Y>
+					<Label><X>-25</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747145755532</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[800]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[435]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747145753357</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747145863696</Id>
+					<Name><![CDATA[routerBLE_inSO_1]]></Name>
+					<X>1900</X><Y>1480</Y>
+					<Label><X>-70</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747145867407</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1080]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[490]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747145863694</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747145939375</Id>
+					<Name><![CDATA[routerBLE_inSO_2]]></Name>
+					<X>2000</X><Y>1480</Y>
+					<Label><X>-40</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747145942316</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[940]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[490]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747145939373</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747145988430</Id>
+					<Name><![CDATA[routerBLE_inSO_3]]></Name>
+					<X>2100</X><Y>1480</Y>
+					<Label><X>-20</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747145991778</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[800]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[490]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747145988428</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747146043609</Id>
+					<Name><![CDATA[routerBLE_outSO_1]]></Name>
+					<X>1900</X><Y>1520</Y>
+					<Label><X>-50</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747146045938</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[965]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[555]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747146043607</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747146065657</Id>
+					<Name><![CDATA[routerBLE_outSO_2]]></Name>
+					<X>2000</X><Y>1520</Y>
+					<Label><X>-30</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747146067854</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[825]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[555]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747146065655</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747146084400</Id>
+					<Name><![CDATA[routerBLE_outSO_3]]></Name>
+					<X>2100</X><Y>1520</Y>
+					<Label><X>-25</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747146086183</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[chirurgia]]></PackageName>
+						<ClassName><![CDATA[RouterBLE]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[chirurgia]]></PackageName>
+							<ClassName><![CDATA[RouterBLE]]></ClassName>
+							<ItemName><![CDATA[1734452330494]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[x]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[680]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[y]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[555]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[areaName]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1747146084398</Id>
 						<TableReference>
 						</TableReference>
 					</InitializationDatabaseTableQuery>
@@ -15597,7 +16202,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1745830638287</Id>
+										<Id>1747205838818</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -15646,7 +16251,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1745830638286</Id>
+											<Id>1747205838817</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -15847,7 +16452,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1745830638295</Id>
+										<Id>1747205838826</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -15896,7 +16501,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1745830638294</Id>
+											<Id>1747205838825</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -16410,7 +17015,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1745830638303</Id>
+										<Id>1747205838834</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -16459,7 +17064,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1745830638302</Id>
+											<Id>1747205838833</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -19160,7 +19765,7 @@ if(nameLocation.contains("prep")) {
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1745830638311</Id>
+										<Id>1747205838842</Id>
 										<GenericParameterSubstitute>
 											<GenericParameterSubstituteReference>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -19187,7 +19792,7 @@ if(nameLocation.contains("prep")) {
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1745830638310</Id>
+											<Id>1747205838841</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -23383,13 +23988,175 @@ if(nameLocation.contains("prep")) {
 					<Latitude>0.0</Latitude>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747127548918</Id>
+					<Name><![CDATA[routerBLE_inSI_1_presentation]]></Name>
+					<X>1080</X><Y>435</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747145709972</Id>
+					<Name><![CDATA[routerBLE_inSI_2_presentation]]></Name>
+					<X>940</X><Y>435</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747145755532</Id>
+					<Name><![CDATA[routerBLE_inSI_3_presentation]]></Name>
+					<X>800</X><Y>435</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747145867407</Id>
+					<Name><![CDATA[routerBLE_inSO_1_presentation]]></Name>
+					<X>1080</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747145942316</Id>
+					<Name><![CDATA[routerBLE_inSO_2_presentation]]></Name>
+					<X>940</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747145991778</Id>
+					<Name><![CDATA[routerBLE_inSO_3_presentation]]></Name>
+					<X>800</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747146045938</Id>
+					<Name><![CDATA[routerBLE_outSO_1_presentation]]></Name>
+					<X>965</X><Y>555</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747146067854</Id>
+					<Name><![CDATA[routerBLE_outSO_2_presentation]]></Name>
+					<X>825</X><Y>555</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747146086183</Id>
+					<Name><![CDATA[routerBLE_outSO_3_presentation]]></Name>
+					<X>680</X><Y>555</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
 				<EmbeddedObjectPresentation>
 					<Id>1735176599837</Id>
 					<Name><![CDATA[routerBLEs_presentation]]></Name>
-					<X>1360</X><Y>1300</Y>
+					<X>2010</X><Y>1360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23762,7 +24529,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1741343310275</Id>
 					<Name><![CDATA[operation_time]]></Name>
-					<X>180</X><Y>230</Y>
+					<X>190</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23855,7 +24622,7 @@ if(nameLocation.contains("prep")) {
 				<Variable Class="Parameter">
 					<Id>1741540019550</Id>
 					<Name><![CDATA[priority]]></Name>
-					<X>180</X><Y>260</Y>
+					<X>190</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -23966,6 +24733,27 @@ if(nameLocation.contains("prep")) {
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1747206117145</Id>
+					<Name><![CDATA[surgery_id]]></Name>
+					<X>190</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1747206117143</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Events>
 				<Event>
@@ -24025,6 +24813,28 @@ connections.send(Map.of("id", patientId,
     	    			"surgery","",
     	    			"currentLocation", position),
 	bridge);]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1747206077242</Id>
+					<Name><![CDATA[updateSurgeryAsset]]></Name>
+					<X>510</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1747206228978</Id>
+					<Name><![CDATA[updateSurgeryEvents]]></Name>
+					<X>510</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -26294,11 +27104,11 @@ for ( Patient patient : patientsList ) {
 						</ColorMapping>
 						<ColorMapping>
 							<Name><![CDATA[MA__96_96_96]]></Name>
-							<OriginalColor>-10526881</OriginalColor>
+							<OriginalColor>-10461088</OriginalColor>
 						</ColorMapping>
 						<ColorMapping>
 							<Name><![CDATA[MA_material_27]]></Name>
-							<OriginalColor>-8731175</OriginalColor>
+							<OriginalColor>-8665383</OriginalColor>
 						</ColorMapping>
 						<ColorMapping>
 							<Name><![CDATA[MA___LightGray_]]></Name>
@@ -26329,7 +27139,7 @@ for ( Patient patient : patientsList ) {
 					<LineColor>-1644806</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<RadiusX>50</RadiusX>
+					<RadiusX>10</RadiusX>
 					<RadiusY>40</RadiusY>
 					<Rotation>0.0</Rotation>
 					<FillColor/>
