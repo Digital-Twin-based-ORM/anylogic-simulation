@@ -110,3 +110,14 @@
 173.66072710839677 Paziente:1397start operation
 173.66072710839677 Paziente:1397start operation
 173.66072710839677 Paziente:1397start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+173.66072710839677 Paziente:1408start operation
+252.2190424163461 Paziente:1409start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+252.2190424163461 Paziente:1407start operation
+456.6860502037857 Paziente:1406start operation
