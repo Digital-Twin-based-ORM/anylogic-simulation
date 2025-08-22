@@ -3147,7 +3147,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672318</Id>
+									<Id>1755770927200</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -3178,7 +3178,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672317</Id>
+										<Id>1755770927199</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4247,7 +4247,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672326</Id>
+									<Id>1755770927208</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Surgeon]]></ClassName>
@@ -4278,7 +4278,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672325</Id>
+										<Id>1755770927207</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4673,7 +4673,7 @@ switch(agent.operating_room) {
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
+								<Code><![CDATA[4 //(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -5744,7 +5744,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672334</Id>
+									<Id>1755770927216</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -5775,7 +5775,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672333</Id>
+										<Id>1755770927215</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6041,7 +6041,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672342</Id>
+									<Id>1755770927224</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[StretcherBearer]]></ClassName>
@@ -6072,7 +6072,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672341</Id>
+										<Id>1755770927223</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6742,7 +6742,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672350</Id>
+									<Id>1755770927232</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Assistant]]></ClassName>
@@ -6773,7 +6773,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672349</Id>
+										<Id>1755770927231</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -7156,8 +7156,8 @@ agent.updateSurgeryEvents("InF");]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+								<Code><![CDATA[4 //triangular( 0.5, 1, 1.5 ) min]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9343,7 +9343,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672358</Id>
+									<Id>1755770927240</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9370,7 +9370,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672357</Id>
+										<Id>1755770927239</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -9638,7 +9638,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672366</Id>
+									<Id>1755770927248</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9665,7 +9665,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672365</Id>
+										<Id>1755770927247</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -12826,7 +12826,7 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
+								<Code><![CDATA[4 //(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -12923,7 +12923,7 @@ agent.updatePhysicalAsset();]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
+								<Code><![CDATA[4 //(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -13124,7 +13124,7 @@ agent.updatePhysicalAsset();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672374</Id>
+									<Id>1755770927256</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -13155,7 +13155,7 @@ agent.updatePhysicalAsset();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672373</Id>
+										<Id>1755770927255</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13302,7 +13302,7 @@ agent.patientId = "nd";]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672382</Id>
+									<Id>1755770927264</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -13333,7 +13333,7 @@ agent.patientId = "nd";]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672381</Id>
+										<Id>1755770927263</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13826,7 +13826,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672390</Id>
+									<Id>1755770927272</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -13853,7 +13853,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672389</Id>
+										<Id>1755770927271</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -14616,7 +14616,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[435]]></Code>
+								<Code><![CDATA[430]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14688,7 +14688,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[435]]></Code>
+								<Code><![CDATA[430]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14760,7 +14760,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[435]]></Code>
+								<Code><![CDATA[430]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14826,7 +14826,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[1080]]></Code>
+								<Code><![CDATA[965]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14898,7 +14898,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[940]]></Code>
+								<Code><![CDATA[825]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14970,7 +14970,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[800]]></Code>
+								<Code><![CDATA[690]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15042,13 +15042,13 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[965]]></Code>
+								<Code><![CDATA[1075]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[555]]></Code>
+								<Code><![CDATA[490]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15114,13 +15114,13 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[825]]></Code>
+								<Code><![CDATA[940]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[555]]></Code>
+								<Code><![CDATA[490]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15166,7 +15166,7 @@ if(nameLocation.contains("prep")) {
 					<Id>1747146084400</Id>
 					<Name><![CDATA[routerBLE_outSO_3]]></Name>
 					<X>2100</X><Y>1520</Y>
-					<Label><X>-25</X><Y>20</Y></Label>
+					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -15186,13 +15186,13 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[x]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[680]]></Code>
+								<Code><![CDATA[800]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[y]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[555]]></Code>
+								<Code><![CDATA[490]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15448,7 +15448,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[databaseTable]]></Name>
 							<Value Class="DatabaseContextTableCodeValue">
-								<Id>1753612672392</Id>
+								<Id>1755770927274</Id>
 								<TableReference>
 									<PackageName><![CDATA[chirurgia]]></PackageName>
 									<ClassName><![CDATA[simulation_table]]></ClassName>
@@ -15540,7 +15540,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1753612672400</Id>
+									<Id>1755770927282</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -15589,7 +15589,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1753612672399</Id>
+										<Id>1755770927281</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -15654,7 +15654,7 @@ if(nameLocation.contains("prep")) {
 											<Value>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
 												<ClassName><![CDATA[simulation_table]]></ClassName>
-												<ItemName><![CDATA[id]]></ItemName>
+												<ItemName><![CDATA[surgery_id]]></ItemName>
 											</Value>
 										</Item>
 										<Item>
@@ -15675,12 +15675,23 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[changeDimensions]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0.5]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[width]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0.5]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[height]]></Name>
@@ -16894,7 +16905,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1753612672408</Id>
+										<Id>1755770927290</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -16943,7 +16954,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1753612672407</Id>
+											<Id>1755770927289</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -17144,7 +17155,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1753612672416</Id>
+										<Id>1755770927298</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17193,7 +17204,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1753612672415</Id>
+											<Id>1755770927297</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -17707,7 +17718,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1753612672424</Id>
+										<Id>1755770927306</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17756,7 +17767,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1753612672423</Id>
+											<Id>1755770927305</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -20457,7 +20468,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1753612672432</Id>
+										<Id>1755770927314</Id>
 										<GenericParameterSubstitute>
 											<GenericParameterSubstituteReference>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -20484,7 +20495,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1753612672431</Id>
+											<Id>1755770927313</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -20605,10 +20616,10 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<Height>40</Height>
 					<Rotation>0.0</Rotation>
 				</RectangleNode>
-				<Path SourceId="1734380696687" TargetId="1732198370841">
+				<Path SourceId="1732198370841" TargetId="1734380696687">
 					<Id>1734380726602</Id>
 					<Name><![CDATA[path24]]></Name>
-					<X>1075</X><Y>470</Y>
+					<X>1075</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20626,13 +20637,13 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-1.248</X><Y>-24.969</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
-						<Point><X>69</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-1.2480000000000002</X><Y>-24.969</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>5</Y><Z>0</Z></Point>
+						<Point><X>69</X><Y>-40</Y><Z>0</Z></Point>
 					</Points>
-					<Bidirectional>true</Bidirectional>
+					<Bidirectional>false</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
 					<SpeedLimitValue Class="CodeUnitValue">
 						<Code><![CDATA[10.0]]></Code>
@@ -20782,7 +20793,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<Path SourceId="1734380873512" TargetId="1732198383350">
 					<Id>1734380886991</Id>
 					<Name><![CDATA[path25]]></Name>
-					<X>935</X><Y>470</Y>
+					<X>825</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -20806,7 +20817,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
 						<Point><X>-20</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
-					<Bidirectional>true</Bidirectional>
+					<Bidirectional>false</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
 					<SpeedLimitValue Class="CodeUnitValue">
 						<Code><![CDATA[10.0]]></Code>
@@ -21845,7 +21856,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<Path SourceId="1744817531641" TargetId="1744817734611">
 					<Id>1744817946457</Id>
 					<Name><![CDATA[path32]]></Name>
-					<X>795</X><Y>470</Y>
+					<X>690</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -21869,7 +21880,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
 						<Point><X>-20</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
-					<Bidirectional>true</Bidirectional>
+					<Bidirectional>false</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
 					<SpeedLimitValue Class="CodeUnitValue">
 						<Code><![CDATA[10.0]]></Code>
@@ -22377,6 +22388,114 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</SpeedLimitValue>
 				</PointNode>
+				<Path SourceId="1734380696687" TargetId="1732198370841">
+					<Id>1755772008550</Id>
+					<Name><![CDATA[path35]]></Name>
+					<X>965</X><Y>470</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>dashedLine</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">1</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-1.248</X><Y>-24.969</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+						<Point><X>69</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<Path SourceId="1732198383350" TargetId="1734380873512">
+					<Id>1755856315725</Id>
+					<Name><![CDATA[path37]]></Name>
+					<X>940</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>dashedLine</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">1</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-1.2480000000000002</X><Y>-24.969</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>5</Y><Z>0</Z></Point>
+						<Point><X>69</X><Y>-40</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
+				<Path SourceId="1744817734611" TargetId="1744817531641">
+					<Id>1755856320295</Id>
+					<Name><![CDATA[path38]]></Name>
+					<X>800</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LineColor>-14774017</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineWidth>1</LineWidth>
+					<PathType>dashedLine</PathType>
+					
+					<Width Class="UnitValue">
+						<Value Class="Double">1</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</Width>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-1.2480000000000002</X><Y>-24.969</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>-20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>5</Y><Z>0</Z></Point>
+						<Point><X>69</X><Y>-40</Y><Z>0</Z></Point>
+					</Points>
+					<Bidirectional>false</Bidirectional>
+					<SpeedLimit>false</SpeedLimit>
+					<SpeedLimitValue Class="CodeUnitValue">
+						<Code><![CDATA[10.0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</SpeedLimitValue>
+					<LimitNumberOfTransporters>false</LimitNumberOfTransporters>
+					<LimitNumberOfTransportersValue>10</LimitNumberOfTransportersValue>
+				</Path>
 			</Presentation>
 
 					<Z>0</Z>
@@ -22872,7 +22991,6 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					   <Point><X>0</X><Y>-80</Y><Z>0</Z></Point>
-					   <Point><X>120</X><Y>-80</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>false</Closed>
 				</Polyline>
@@ -22901,7 +23019,6 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					   <Point><X>0</X><Y>-80</Y><Z>0</Z></Point>
-					   <Point><X>120</X><Y>-80</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>false</Closed>
 				</Polyline>
@@ -24827,7 +24944,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 					   <Point><X>0</X><Y>-80</Y><Z>0</Z></Point>
-					   <Point><X>120</X><Y>-80</Y><Z>0</Z></Point>
+					   <Point><X>10</X><Y>-80</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>false</Closed>
 				</Polyline>
@@ -24949,7 +25066,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747127548918</Id>
 					<Name><![CDATA[routerBLE_inSI_1_presentation]]></Name>
-					<X>1080</X><Y>435</Y>
+					<X>1080</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24967,7 +25084,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747145709972</Id>
 					<Name><![CDATA[routerBLE_inSI_2_presentation]]></Name>
-					<X>940</X><Y>435</Y>
+					<X>940</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24985,7 +25102,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747145755532</Id>
 					<Name><![CDATA[routerBLE_inSI_3_presentation]]></Name>
-					<X>800</X><Y>435</Y>
+					<X>800</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25003,7 +25120,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747145867407</Id>
 					<Name><![CDATA[routerBLE_inSO_1_presentation]]></Name>
-					<X>1080</X><Y>490</Y>
+					<X>965</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25021,7 +25138,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747145942316</Id>
 					<Name><![CDATA[routerBLE_inSO_2_presentation]]></Name>
-					<X>940</X><Y>490</Y>
+					<X>825</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25039,7 +25156,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747145991778</Id>
 					<Name><![CDATA[routerBLE_inSO_3_presentation]]></Name>
-					<X>800</X><Y>490</Y>
+					<X>690</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25057,7 +25174,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747146045938</Id>
 					<Name><![CDATA[routerBLE_outSO_1_presentation]]></Name>
-					<X>965</X><Y>555</Y>
+					<X>1075</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25075,7 +25192,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747146067854</Id>
 					<Name><![CDATA[routerBLE_outSO_2_presentation]]></Name>
-					<X>825</X><Y>555</Y>
+					<X>940</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25093,7 +25210,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1747146086183</Id>
 					<Name><![CDATA[routerBLE_outSO_3_presentation]]></Name>
-					<X>680</X><Y>555</Y>
+					<X>800</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -25260,6 +25377,126 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
 </Figure3D>
+				<Line>
+					<Id>1755771877812</Id>
+					<Name><![CDATA[line56]]></Name>
+					<X>975</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-3308225</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>90</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Line>
+					<Id>1755771995225</Id>
+					<Name><![CDATA[line57]]></Name>
+					<X>950</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-3308225</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>10</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Line>
+					<Id>1755855624214</Id>
+					<Name><![CDATA[line58]]></Name>
+					<X>810</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-3308225</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>10</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Line>
+					<Id>1755855963134</Id>
+					<Name><![CDATA[line59]]></Name>
+					<X>835</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-3308225</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>95</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
+				<Line>
+					<Id>1755856015222</Id>
+					<Name><![CDATA[line60]]></Name>
+					<X>695</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-3308225</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>95</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
 			</Presentation>
 
 				</Level>
@@ -25832,7 +26069,7 @@ System.out.println("PAZIENTE CREATO: " + agent.patientId);]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
+						<Type><![CDATA[String]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -25951,7 +26188,7 @@ connections.send(Map.of("id", patientId,
 					<Body><![CDATA[System.out.println("NUOVO EVENTO INTERVENTO");
 connections.send(Map.of("id", surgery_id, 
     	    			"type","surgery",
-    	    			event, ""),
+    	    			 "updateSurgeryState", event),
 	bridge);]]></Body>
 				</Function>
 			</Functions>
@@ -28161,14 +28398,18 @@ patient.assistant_ready = true;]]></EntryAction>
 for ( Patient patient : patientsList ) {
 	double dx = x - patient.getX();
 	double dy = y - patient.getY();
-	double dz = z - patient.getZ();
-	double dist = sqrt( dx*dx + dy*dy + dz*dz );
-	if( dist < 50 ) {
+	double dist = sqrt( dx*dx + dy*dy );
+	if( dist <= radius ) {
 		patient.distance = (int)dist;
 		patient.router = this.getId();
-		patient.secCounter = 0;
-		// patient.updatePhysicalAsset();
-		patient.updateSurgeryEvents(areaName);
+		// System.out.println("SCANNERIZZATO PAZIENTE PASSATO IN: " + areaName);
+		if(patient.bleConnected == "FALSE") {
+			System.out.println("PAZIENTE PASSATO IN: " + areaName);
+			patient.secCounter = 0;
+			patient.bleConnected = "TRUE";
+			// patient.updatePhysicalAsset();
+			patient.updateSurgeryEvents(areaName);
+		}
 	}
 }]]></Action>
 				</Event>
