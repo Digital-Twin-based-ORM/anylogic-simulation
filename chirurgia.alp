@@ -2550,7 +2550,24 @@ holdEquipe.recalculateConditions();]]></Action>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[// at 9am o'clock every day
-System.out.println("PRIMA AZIONE GIORNALIERA ESEGUITA");]]></Action>
+System.out.println("PRIMA AZIONE GIORNALIERA ESEGUITA");
+String currentDate = BasicUtilities.getDateTimestamp(getExperiment()).toString();
+/* SET THE CURRENT DATE FOR THE DEPARTMENT */
+connections.send(Map.of("id", "department1", 
+    	    			"type","dep",
+    	    			 "currentDate", currentDate),
+	bridgeConnection);
+
+/* ASSIGN THE SLOTS OF THE OPERATING ROOMS TO THE DEPARTMENT */
+connections.send(Map.of("id", "or_1", 
+    	    			"type","operatingroom",
+    	    			 "assignDailySlots", currentDate),
+	bridgeConnection);
+	
+connections.send(Map.of("id", "or_2", 
+    	    			"type","operatingroom",
+    	    			 "assignDailySlots", currentDate),
+	bridgeConnection);]]></Action>
 				</Event>
 				<Event>
 					<Id>1753614465016</Id>
@@ -2586,7 +2603,7 @@ System.out.println("PRIMA AZIONE GIORNALIERA ESEGUITA");]]></Action>
 System.out.println("FINE AZIONE GIORNALIERA ESEGUITA");
 connections.send(Map.of("id", "department1", 
     	    			"type","dep",
-    	    			 "endWorkDay", ""),
+    	    			 "endWorkDay", " "),
 	bridgeConnection);]]></Action>
 				</Event>
 			</Events>
@@ -3184,7 +3201,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474634</Id>
+									<Id>1760693414947</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -3215,7 +3232,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474633</Id>
+										<Id>1760693414946</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4284,7 +4301,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474642</Id>
+									<Id>1760693414955</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Surgeon]]></ClassName>
@@ -4315,7 +4332,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474641</Id>
+										<Id>1760693414954</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4652,7 +4669,13 @@ switch(agent.operating_room) {
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.set_position("arrived in operation room");]]></Code>
+								<Code><![CDATA[agent.set_position("arrived in operation room");
+
+// notify the OR is busy
+connections.send(Map.of("id", BasicUtilities.getRoomId(agent.operating_room), 
+    	    			"type","operatingroom",
+    	    			 "busy", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -4710,8 +4733,8 @@ switch(agent.operating_room) {
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+								<Code><![CDATA[agent.estimatedIncisionDelay]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5785,7 +5808,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474650</Id>
+									<Id>1760693414963</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -5816,7 +5839,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474649</Id>
+										<Id>1760693414962</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6082,7 +6105,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474658</Id>
+									<Id>1760693414971</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[StretcherBearer]]></ClassName>
@@ -6113,7 +6136,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474657</Id>
+										<Id>1760693414970</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6781,7 +6804,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474666</Id>
+									<Id>1760693414979</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Assistant]]></ClassName>
@@ -6812,7 +6835,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474665</Id>
+										<Id>1760693414978</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -7566,7 +7589,12 @@ agent.updateSurgeryEvents("InF");]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.set_position("change bed operation room");
-// TODO uscita dal blocco operatorio]]></Code>
+
+// notify the OR is free
+connections.send(Map.of("id", BasicUtilities.getRoomId(agent.operating_room), 
+    	    			"type","operatingroom",
+    	    			 "nowAvailable", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -8424,13 +8452,21 @@ agent.updateSurgeryEvents("InF");]]></Code>
 						<Parameter>
 							<Name><![CDATA[onStart]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("Sala 1 in sanificazione...");]]></Code>
+								<Code><![CDATA[traceln("Sala 1 in sanificazione...");
+connections.send(Map.of("id", "or_1", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionStarted", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFinish]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("Sala 1 sanificata...");]]></Code>
+								<Code><![CDATA[traceln("Sala 1 sanificata...");
+connections.send(Map.of("id", "or_1", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionTerminated", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9385,7 +9421,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474674</Id>
+									<Id>1760693414987</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9412,7 +9448,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474673</Id>
+										<Id>1760693414986</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -9680,7 +9716,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474682</Id>
+									<Id>1760693414995</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9707,7 +9743,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474681</Id>
+										<Id>1760693414994</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -12795,13 +12831,21 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[onStart]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("Sala 2 in sanificazione...");]]></Code>
+								<Code><![CDATA[traceln("Sala 2 in sanificazione...");
+connections.send(Map.of("id", "or_2", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionStarted", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onFinish]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("Sala 2 sanificata...");]]></Code>
+								<Code><![CDATA[traceln("Sala 2 sanificata...");
+connections.send(Map.of("id", "or_2", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionTerminated", " "),
+	bridgeConnection);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12868,8 +12912,8 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+								<Code><![CDATA[agent.getEstimatedTime() + triangular( agent.getEstimatedTime() * (-0.1), 0, agent.getEstimatedTime() * 0.3 )]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12965,8 +13009,8 @@ agent.updatePhysicalAssetLocation();]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(agent.estimatedTime + triangular( agent.estimatedTime * (-0.1), 0, agent.estimatedTime * 0.3 )) / 3]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+								<Code><![CDATA[agent.estimatedSutureDelay]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13005,7 +13049,8 @@ agent.updatePhysicalAssetLocation();]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.under_surgery = false;
 agent.updatePhysicalAssetLocation();
-agent.updateSurgeryEvents("EndCh");]]></Code>
+agent.updateSurgeryEvents("EndCh");
+agent.updateSurgeryAsset("executedIn", BasicUtilities.executedIn(BasicUtilities.getRoomId(agent.operating_room), BasicUtilities.getRoomId(agent.operating_room)));]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13167,7 +13212,7 @@ agent.updateSurgeryEvents("EndCh");]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474690</Id>
+									<Id>1760693415003</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -13198,7 +13243,7 @@ agent.updateSurgeryEvents("EndCh");]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474689</Id>
+										<Id>1760693415002</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13345,7 +13390,7 @@ agent.patientId = "nd";]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474698</Id>
+									<Id>1760693415011</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -13376,7 +13421,7 @@ agent.patientId = "nd";]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474697</Id>
+										<Id>1760693415010</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13869,7 +13914,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474706</Id>
+									<Id>1760693415019</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -13896,7 +13941,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474705</Id>
+										<Id>1760693415018</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -14189,7 +14234,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[downtimeList]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[{ downtimeOR1 }]]></Code>
+								<Code><![CDATA[{ downtimeOR3 }]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14673,6 +14718,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -14745,6 +14793,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -14817,6 +14868,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -14889,6 +14943,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -14961,6 +15018,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -15033,6 +15093,9 @@ if(nameLocation.contains("prep")) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[radius]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[15]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -15491,7 +15554,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[databaseTable]]></Name>
 							<Value Class="DatabaseContextTableCodeValue">
-								<Id>1757321474708</Id>
+								<Id>1760693415021</Id>
 								<TableReference>
 									<PackageName><![CDATA[chirurgia]]></PackageName>
 									<ClassName><![CDATA[simulation_table]]></ClassName>
@@ -15583,7 +15646,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1757321474716</Id>
+									<Id>1760693415029</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -15632,7 +15695,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1757321474715</Id>
+										<Id>1760693415028</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -16216,6 +16279,225 @@ agent.initPatient();]]></Code>
 					<InitializationType>SPECIFIED_NUMBER</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<Id>1756029382486</Id>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1757936183255</Id>
+					<Name><![CDATA[downtimeOR3]]></Name>
+					<X>2140</X><Y>1280</Y>
+					<Label><X>-35</X><Y>25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Downtime]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Downtime]]></ClassName>
+							<ItemName><![CDATA[1412336243196]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[activityType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[resetAllFailures]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[resetFailures]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[triggerType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[schedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[totalTimeToOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[timeStartsAfterTaskEnd]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[workingTimeToOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[cyclesToOccurrence]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[customFirstOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[totalTimeToFirstOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[workingTimeToFirstOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[cyclesToFirstOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[distanceToFirstOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[distanceToOccurrence]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[taskType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.TASK_DELAY_WITH_RESOURCES]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[taskDuration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[30]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[taskStartBlock]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[seizeFromOnePool]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[resourceSets]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[{ 
+  { cleanEquipePool }
+}]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[resourcePool]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[resourceQuantity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[sendResources]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destinationType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.DEST_NODE]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destinationNode]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[operatingRoomEM]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destinationAttractor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[moveToHomeLocation]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[moveBeforeDowntime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationNode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationEntity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationAttractor]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationX]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationY]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[downtimeDestinationZ]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[usageState]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[priority]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[mayPreempt]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[preemptionPolicy]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onStart]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[traceln("Sala 2 in sanificazione...");
+connections.send(Map.of("id", "or_3", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionStarted", " "),
+	bridgeConnection);]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onFinish]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[traceln("Sala 2 sanificata...");
+connections.send(Map.of("id", "or_3", 
+    	    			"type","operatingroom",
+    	    			 "disinfectionTerminated", " "),
+	bridgeConnection);]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onTerminateCallback]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[taskDelayResource]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[taskTravelTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onDowntimeTriggered]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>XYZ</InitialLocationType>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<Id>1757936183253</Id>
 						<TableReference>
 						</TableReference>
 					</InitializationDatabaseTableQuery>
@@ -17038,7 +17320,7 @@ agent.initPatient();]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1757321474724</Id>
+										<Id>1760693415037</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17087,7 +17369,7 @@ agent.initPatient();]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1757321474723</Id>
+											<Id>1760693415036</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -17288,7 +17570,7 @@ agent.initPatient();]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1757321474732</Id>
+										<Id>1760693415045</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17337,7 +17619,7 @@ agent.initPatient();]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1757321474731</Id>
+											<Id>1760693415044</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -17851,7 +18133,7 @@ agent.initPatient();]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1757321474740</Id>
+										<Id>1760693415053</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17900,7 +18182,7 @@ agent.initPatient();]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1757321474739</Id>
+											<Id>1760693415052</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -20601,7 +20883,7 @@ agent.initPatient();]]></Code>
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1757321474748</Id>
+										<Id>1760693415061</Id>
 										<GenericParameterSubstitute>
 											<GenericParameterSubstituteReference>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -20628,7 +20910,7 @@ agent.initPatient();]]></Code>
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1757321474747</Id>
+											<Id>1760693415060</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -24953,7 +25235,7 @@ agent.initPatient();]]></Code>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-65536</Color>
-					<Text><![CDATA[PAZIENTE IN URGENZA]]></Text>
+					<Text><![CDATA[PAZIENTE IN EMERGENZA]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>20</Size>
@@ -25816,6 +26098,37 @@ agent.initPatient();]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1757762375998</Id>
+					<Name><![CDATA[estimatedIncisionDelay]]></Name>
+					<X>370</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[// minutes
+triangular(5,10,7)]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1757762414832</Id>
+					<Name><![CDATA[estimatedSutureDelay]]></Name>
+					<X>370</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[triangular(5,10,7) // minutes]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1732231385723</Id>
 					<Name><![CDATA[position]]></Name>
@@ -26237,6 +26550,31 @@ agent.initPatient();]]></Code>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1760693666169</Id>
+					<Name><![CDATA[isEmergency]]></Name>
+					<X>50</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1760693666167</Id>
+							<Label><![CDATA[isEmergency]]></Label>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Events>
 				<Event>
@@ -26283,7 +26621,7 @@ agent.initPatient();]]></Code>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1741865344740</Id>
 					<Name><![CDATA[updatePhysicalAssetLocation]]></Name>
-					<X>510</X><Y>60</Y>
+					<X>510</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -26358,12 +26696,16 @@ connections.send(Map.of("id", surgery_id,
 					<Body><![CDATA[System.out.println("AGGIORNO PAZIENTE: " + patientId);
 
 try {
-	/* 
+	 
 	connections.send(Map.of("id", surgery_id, 
 	    	    			"type","surgery", 
 	    	    			"programmed_date", BasicUtilities.parseToLocalDate(operation_time).toString()),
 		bridge);
-		*/
+	connections.send(Map.of("id", surgery_id, 
+	    	    			"type","surgery", 
+	    	    			"patient_id", patientId),
+		bridge);
+		
 		System.out.println("INIZIALIZZATO");
 } catch (Exception e) {
 	e.printStackTrace();
@@ -26374,12 +26716,24 @@ try {
 					<ReturnType><![CDATA[String]]></ReturnType>
 					<Id>1756201329113</Id>
 					<Name><![CDATA[getTimestamp]]></Name>
-					<X>510</X><Y>240</Y>
+					<X>510</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Body><![CDATA[return BasicUtilities.getInstance().getTimestamp(getExperiment()).toString();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1757673181818</Id>
+					<Name><![CDATA[getEstimatedTime]]></Name>
+					<X>510</X><Y>390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[return (double)this.estimatedTime - this.estimatedIncisionDelay - this.estimatedSutureDelay;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -28592,7 +28946,7 @@ for ( Patient patient : patientsList ) {
 	if( dist <= radius ) {
 		patient.distance = (int)dist;
 		patient.router = this.getId();
-		// System.out.println("SCANNERIZZATO PAZIENTE PASSATO IN: " + areaName);
+		System.out.println("SCANNERIZZATO PAZIENTE PASSATO IN: " + areaName);
 		if(patient.bleConnected == "FALSE") {
 			System.out.println("PAZIENTE PASSATO IN: " + areaName);
 			patient.secCounter = 0;
@@ -29758,7 +30112,7 @@ dbModel.loadData();]]></InitialSetupCode>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Never]]></StopOption>
-				<InitialDate><![CDATA[1740733200000]]></InitialDate>
+				<InitialDate><![CDATA[1758618000000]]></InitialDate>
 				<InitialTime><![CDATA[0.0]]></InitialTime>
 				<FinalDate><![CDATA[1734652800000]]></FinalDate>
 				<FinalTime><![CDATA[100.0]]></FinalTime>
@@ -29890,6 +30244,7 @@ connection.sendMessage("messages", "paziente arrivato" + agent.id);
 			<Id>1740224689053</Id>
 			<Name><![CDATA[BasicUtilities]]></Name>
 			<Text><![CDATA[import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
@@ -29959,6 +30314,21 @@ public final class BasicUtilities {
     	}
     }
     
+    public static String getRoomId(String roomName) {
+    	switch(roomName) {
+	    	case "operatingRoom1": {
+	    		return "or_1";
+	    	}
+			case "operatingRoom2": {
+				return "or_2";
+	    	}
+			case "operatingRoomEM": {
+				return "or_3";
+	    	}
+			default: throw new IllegalStateException(roomName);
+    	}
+    }
+    
     public Long getLongTimestamp(Experiment<?> exp) {
     	Date date = exp.date();
     	LocalDateTime localDateTime = date.toInstant()
@@ -29980,6 +30350,15 @@ public final class BasicUtilities {
     	return localDateTime;
     }
     
+    public static LocalDate getDateTimestamp(Experiment<?> exp) {
+    	Date date = exp.date();
+    	LocalDate localDateTime = date.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+    	System.out.println("REQUESTED TIMESTAMP: " + localDateTime);;
+    	return localDateTime;
+    }
+    
     public static SimpleDateFormat getDateFormatter() {
     	return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     }
@@ -29989,6 +30368,15 @@ public final class BasicUtilities {
                 .atZone(ZoneId.systemDefault())
                 .toLocalDateTime();
     	return localDateTime;
+    }
+    
+    public static String executedIn(String idOperatingRoom, String uriOperatingRoom) {
+    	return String.format("""
+            {
+                "id": "%s",
+                "uri": "%s"
+            }
+            """, idOperatingRoom, uriOperatingRoom);
     }
 
 	@Override
