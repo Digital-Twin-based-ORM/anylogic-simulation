@@ -3201,7 +3201,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414947</Id>
+									<Id>1760973616261</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -3232,7 +3232,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414946</Id>
+										<Id>1760973616260</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -4301,7 +4301,7 @@ return displayItems;]]></Body>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414955</Id>
+									<Id>1760973616272</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Surgeon]]></ClassName>
@@ -4314,6 +4314,12 @@ return displayItems;]]></Body>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[patient]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[parameter]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -4332,7 +4338,7 @@ return displayItems;]]></Body>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414954</Id>
+										<Id>1760973616271</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -5808,7 +5814,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414963</Id>
+									<Id>1760973616283</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Anesthesiologist]]></ClassName>
@@ -5821,6 +5827,9 @@ agent.updatePhysicalAssetLocation();]]></Code>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[patient]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -5839,7 +5848,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414962</Id>
+										<Id>1760973616282</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6105,7 +6114,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414971</Id>
+									<Id>1760973616292</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[StretcherBearer]]></ClassName>
@@ -6136,7 +6145,7 @@ agent.updatePhysicalAssetLocation();]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414970</Id>
+										<Id>1760973616291</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -6804,7 +6813,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414979</Id>
+									<Id>1760973616300</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Assistant]]></ClassName>
@@ -6817,6 +6826,9 @@ agent.updateSurgeryEvents("InF");]]></Code>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[patient]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -6835,7 +6847,7 @@ agent.updateSurgeryEvents("InF");]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414978</Id>
+										<Id>1760973616299</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -8721,7 +8733,7 @@ connections.send(Map.of("id", "or_1",
 						<Parameter>
 							<Name><![CDATA[priority]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority]]></Code>
+								<Code><![CDATA[agent.isEmergency ? 1 : 0]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -8940,7 +8952,7 @@ send(agent.recovery_room, unit);]]></Code>
 						<Parameter>
 							<Name><![CDATA[priority]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority]]></Code>
+								<Code><![CDATA[agent.isEmergency ? 1 : 0]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9162,7 +9174,7 @@ send("seized", unit);]]></Code>
 						<Parameter>
 							<Name><![CDATA[priority]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority]]></Code>
+								<Code><![CDATA[agent.isEmergency ? 1 : 0]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -9421,7 +9433,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414987</Id>
+									<Id>1760973616309</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9448,7 +9460,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414986</Id>
+										<Id>1760973616308</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -9716,7 +9728,7 @@ send("seized", unit);]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693414995</Id>
+									<Id>1760973616317</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -9743,7 +9755,7 @@ send("seized", unit);]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693414994</Id>
+										<Id>1760973616316</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -10767,7 +10779,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[priority]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority]]></Code>
+								<Code><![CDATA[agent.isEmergency ? 1 : 0]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11164,7 +11176,7 @@ send(agent.operating_room, unit);]]></Code>
 						<Parameter>
 							<Name><![CDATA[condition]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority == 0]]></Code>
+								<Code><![CDATA[agent.isEmergency]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11952,7 +11964,7 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[condition]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[inEmergency > 0 && agent.priority < 1]]></Code>
+								<Code><![CDATA[inEmergency > 0 && !agent.isEmergency]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11970,7 +11982,7 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[if(agent.priority > 0) {
+								<Code><![CDATA[if(agent.isEmergency) {
 	inEmergency--;
 	if(inEmergency == 0) {
 		textEmergency.setVisible(false);
@@ -12203,7 +12215,7 @@ acceptanceTime.stopDelayForAll();]]></Code>
 						<Parameter>
 							<Name><![CDATA[condition]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.priority > 0]]></Code>
+								<Code><![CDATA[agent.isEmergency]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13212,7 +13224,7 @@ agent.updateSurgeryAsset("executedIn", BasicUtilities.executedIn(BasicUtilities.
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693415003</Id>
+									<Id>1760973616333</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -13225,6 +13237,63 @@ agent.updateSurgeryAsset("executedIn", BasicUtilities.executedIn(BasicUtilities.
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
+										<Parameter>
+											<Name><![CDATA[position]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[distance]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[router]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[bleConnected]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[secCounter]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[admission_time]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[recovery_room]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[operating_room]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[operation_time]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[surgeon_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[assistant_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[anesthesiologist_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[priority]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[under_surgery]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[estimatedTime]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[bridge]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[surgery_id]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[patientId]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[isEmergency]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -13243,7 +13312,7 @@ agent.updateSurgeryAsset("executedIn", BasicUtilities.executedIn(BasicUtilities.
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693415002</Id>
+										<Id>1760973616332</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13293,7 +13362,7 @@ agent.updateSurgeryAsset("executedIn", BasicUtilities.executedIn(BasicUtilities.
 							<Name><![CDATA[onAtExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.bridge = bridgeConnection;
-agent.priority = 1;
+agent.isEmergency = 1;
 agent.patientId = "nd";]]></Code>
 							</Value>
 						</Parameter>
@@ -13390,7 +13459,7 @@ agent.patientId = "nd";]]></Code>
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693415011</Id>
+									<Id>1760973616360</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Nurse]]></ClassName>
@@ -13421,7 +13490,7 @@ agent.patientId = "nd";]]></Code>
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693415010</Id>
+										<Id>1760973616359</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -13914,7 +13983,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693415019</Id>
+									<Id>1760973616368</Id>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -13941,7 +14010,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693415018</Id>
+										<Id>1760973616367</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -15554,7 +15623,7 @@ if(nameLocation.contains("prep")) {
 						<Parameter>
 							<Name><![CDATA[databaseTable]]></Name>
 							<Value Class="DatabaseContextTableCodeValue">
-								<Id>1760693415021</Id>
+								<Id>1760973616370</Id>
 								<TableReference>
 									<PackageName><![CDATA[chirurgia]]></PackageName>
 									<ClassName><![CDATA[simulation_table]]></ClassName>
@@ -15646,7 +15715,7 @@ if(nameLocation.contains("prep")) {
 							<Value Class="EntityCodeValue">
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
-									<Id>1760693415029</Id>
+									<Id>1760973616378</Id>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[chirurgia]]></PackageName>
 										<ClassName><![CDATA[Patient]]></ClassName>
@@ -15675,7 +15744,46 @@ if(nameLocation.contains("prep")) {
 											<Name><![CDATA[secCounter]]></Name>
 										</Parameter>
 										<Parameter>
-											<Name><![CDATA[id]]></Name>
+											<Name><![CDATA[admission_time]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[recovery_room]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[operating_room]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[operation_time]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[surgeon_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[assistant_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[anesthesiologist_ready]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[priority]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[under_surgery]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[estimatedTime]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[bridge]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[surgery_id]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[patientId]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[isEmergency]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -15695,7 +15803,7 @@ if(nameLocation.contains("prep")) {
 									</LocationNameCode>
 									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 									<InitializationDatabaseTableQuery>
-										<Id>1760693415028</Id>
+										<Id>1760973616377</Id>
 										<TableReference>
 										</TableReference>
 									</InitializationDatabaseTableQuery>
@@ -17320,7 +17428,7 @@ connections.send(Map.of("id", "or_3",
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1760693415037</Id>
+										<Id>1760973616405</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17349,7 +17457,46 @@ connections.send(Map.of("id", "or_3",
 												<Name><![CDATA[secCounter]]></Name>
 											</Parameter>
 											<Parameter>
-												<Name><![CDATA[id]]></Name>
+												<Name><![CDATA[admission_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[recovery_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operating_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operation_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgeon_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[assistant_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[anesthesiologist_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[priority]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[under_surgery]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[estimatedTime]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bridge]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgery_id]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[patientId]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[isEmergency]]></Name>
 											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
@@ -17369,7 +17516,7 @@ connections.send(Map.of("id", "or_3",
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1760693415036</Id>
+											<Id>1760973616404</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -17570,7 +17717,7 @@ connections.send(Map.of("id", "or_3",
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1760693415045</Id>
+										<Id>1760973616432</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -17599,7 +17746,46 @@ connections.send(Map.of("id", "or_3",
 												<Name><![CDATA[secCounter]]></Name>
 											</Parameter>
 											<Parameter>
-												<Name><![CDATA[id]]></Name>
+												<Name><![CDATA[admission_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[recovery_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operating_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operation_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgeon_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[assistant_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[anesthesiologist_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[priority]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[under_surgery]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[estimatedTime]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bridge]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgery_id]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[patientId]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[isEmergency]]></Name>
 											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
@@ -17619,7 +17805,7 @@ connections.send(Map.of("id", "or_3",
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1760693415044</Id>
+											<Id>1760973616431</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -18133,7 +18319,7 @@ connections.send(Map.of("id", "or_3",
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1760693415053</Id>
+										<Id>1760973616459</Id>
 										<ActiveObjectClass>
 											<PackageName><![CDATA[chirurgia]]></PackageName>
 											<ClassName><![CDATA[Patient]]></ClassName>
@@ -18162,7 +18348,46 @@ connections.send(Map.of("id", "or_3",
 												<Name><![CDATA[secCounter]]></Name>
 											</Parameter>
 											<Parameter>
-												<Name><![CDATA[id]]></Name>
+												<Name><![CDATA[admission_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[recovery_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operating_room]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[operation_time]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgeon_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[assistant_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[anesthesiologist_ready]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[priority]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[under_surgery]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[estimatedTime]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[bridge]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[surgery_id]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[patientId]]></Name>
+											</Parameter>
+											<Parameter>
+												<Name><![CDATA[isEmergency]]></Name>
 											</Parameter>
 										</Parameters>
 										<ReplicationFlag>true</ReplicationFlag>
@@ -18182,7 +18407,7 @@ connections.send(Map.of("id", "or_3",
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1760693415052</Id>
+											<Id>1760973616458</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
@@ -20883,7 +21108,7 @@ connections.send(Map.of("id", "or_3",
 								<Value Class="EntityCodeValue">
 									<IsAgentEntity>false</IsAgentEntity>
 									<EntityEmbeddedObject>
-										<Id>1760693415061</Id>
+										<Id>1760973616486</Id>
 										<GenericParameterSubstitute>
 											<GenericParameterSubstituteReference>
 												<PackageName><![CDATA[chirurgia]]></PackageName>
@@ -20910,7 +21135,7 @@ connections.send(Map.of("id", "or_3",
 										</LocationNameCode>
 										<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 										<InitializationDatabaseTableQuery>
-											<Id>1760693415060</Id>
+											<Id>1760973616485</Id>
 											<TableReference>
 											</TableReference>
 										</InitializationDatabaseTableQuery>
